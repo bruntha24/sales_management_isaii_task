@@ -1,16 +1,79 @@
-# React + Vite
+Tech Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend: React (Vite) + Tailwind CSS
 
-Currently, two official plugins are available:
+Backend: Node.js + Express
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Database: MongoDB
 
-## React Compiler
+File Storage: Cloudinary (images, videos, voice notes)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Notifications: Email & in-app notifications
 
-## Expanding the ESLint configuration
+Other Features: Google Maps API for live location, Voice-to-Text translation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Installation
+
+Clone the repository
+
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+
+
+Install dependencies for frontend
+
+cd client
+npm install
+
+
+Install dependencies for backend
+
+cd server
+npm install
+
+
+Setup environment variables
+
+Create a .env file in the server folder:
+
+PORT=8080
+MONGO_URI=<your-mongodb-connection-string>
+CLOUDINARY_CLOUD_NAME=<your-cloud-name>
+CLOUDINARY_API_KEY=<your-api-key>
+CLOUDINARY_API_SECRET=<your-api-secret>
+EMAIL_USER=<your-email>
+EMAIL_PASS=<your-email-password>
+
+Running the Application
+Start backend server:
+cd server
+npm run dev
+
+Start frontend (React Vite) server:
+cd client
+npm run dev
+
+
+Open your browser at http://localhost:5173 (or the port shown in terminal) to access the app.
+
+Usage
+
+Salesperson: Upload images, videos, voice notes, view tasks, and generate invoices.
+
+Manager/Admin: Assign tasks, manage products & categories, view dashboards, and track team activities.
+
+Screenshots
+
+(Include relevant screenshots for Dashboard, Media Uploads, Billing, etc.)
+
+Future Enhancements
+
+Integrate real-time chat using WebSockets.
+
+Add analytics charts for sales performance trends.
+
+Enable mobile-friendly layout and offline support.
+
+License
+
+This project is licensed under the MIT License.
